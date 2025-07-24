@@ -51,5 +51,8 @@ public class MemberDTO {
     }
     public String getEmail() {
         return email;
+
+
+
     }
 }
