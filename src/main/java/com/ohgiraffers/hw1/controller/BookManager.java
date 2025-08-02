@@ -13,13 +13,7 @@ public class BookManager {
         bookList = new ArrayList<>();
     }
     public void addBook(BookDTO book) {
-        bookList.add(new BookDTO(111, 1, "수학세계", "이승민"));
-        bookList.add(new BookDTO(112, 3, "과학으로 살아남기", "이스민"));
-        bookList.add(new BookDTO(113, 3, "과학?", "이스미"));
-        bookList.add(new BookDTO(110, 7, "부처의 말", "이승미"));
-        bookList.add(new BookDTO(114, 5, "급류", "잉승민"));
-        bookList.add(new BookDTO(115, 3, "과학여행", "임승민"));
-        bookList.add(new BookDTO(116, 1, "수학으로 살아님기", "익승민"));
+        bookList.add(book);
     }
 
     public void deleteBook(int index){
