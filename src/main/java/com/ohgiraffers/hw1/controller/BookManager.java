@@ -19,6 +19,7 @@ public class BookManager {
     public void deleteBook(int index){
         bookList.remove(index);
     }
+
     public int searchBook(String title){
         int i;
     if(bookList.contains(title)){
