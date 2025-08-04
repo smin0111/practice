@@ -3,7 +3,6 @@ import com.ohgiraffers.hw1.model.comparator.AscCategory;
 import com.ohgiraffers.hw1.model.comparator.DescCategory;
 import com.ohgiraffers.hw1.model.dto.BookDTO;
 import java.util.ArrayList;
-import java.util.List;
 
 public class BookManager {
 
@@ -17,13 +16,13 @@ public class BookManager {
     }
 
     public void deleteBook(int index){
-        bookList.remove(index);
+       return bookList.remove(index);
     }
 
     public int searchBook(String title){
         int i;
     if(bookList.contains(title)){
-        return i = 1;
+        return printBook(index);
     }else {
         return i = -1;
     }
@@ -35,11 +34,9 @@ public class BookManager {
     }
     }
 
-    public void displayAll(){
+    public ArrayList<BookDTO> displayAll(){
 
-        for (int i = 0; i < bookList.size(); i++){
-            System.out.println(bookList.get(i));
-        }
+        return bookList;
     }
 
     public ArrayList<BookDTO> sortedBookList(int select){
