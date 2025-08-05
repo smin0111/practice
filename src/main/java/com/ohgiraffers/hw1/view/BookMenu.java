@@ -47,7 +47,6 @@ public class BookMenu {
                 case 3 :
                     System.out.print("삭제할 도서 번호를 입력해주세요 : ");
                     int index = sc.nextInt();
-                    if ((bM.deleteBook(index)) == )
                     bM.deleteBook(index);
                     break;
                 case 4 :
@@ -101,11 +100,9 @@ public class BookMenu {
 
     }
 
-    public String inputBookTitle(){
-
-        System.out.println("도서 제목 : ");
-        String BTitle = sc.nextLine();
-        return BTitle;
+    public String inputBookTitle() {
+        System.out.print("도서 제목 : ");
+        return sc.nextLine();
     }
 
 }

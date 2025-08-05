@@ -16,22 +16,27 @@ public class BookManager {
     }
 
     public void deleteBook(int index){
-       return bookList.remove(index);
+        if (index >= 0 && index < bookList.size()) {
+            bookList.remove(index);
+            System.out.println("도서가 삭제되었습니다.");
+        } else {
+            System.out.println("유효하지 않은 인덱스입니다.");
+        }
     }
 
     public int searchBook(String title){
-        int i;
-    if(bookList.contains(title)){
-        return printBook(index);
-    }else {
-        return i = -1;
-    }
+        for (int i = 0; i < bookList.size(); i++) {
+            if (bookList.get(i).getTitle().equals(title)) {
+                return i;
+            }
+        }
+        return -1;
     }
 
+
     public void printBook(int index){
-    for (int i = index; i == index; i++){
-        System.out.println(bookList.get(i));
-    }
+        System.out.println(bookList.get(index));
+
     }
 
     public ArrayList<BookDTO> displayAll(){
